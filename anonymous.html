@@ -164,7 +164,15 @@
             <input type="hidden" name="access_key" value="6a38455c-4159-4a3c-ba27-5f8f5d0c6349">
             
             <input type="hidden" name="_next" value="https://acrobiomedical.github.io/feedback/thanks.html" />
-            <textarea class="ask-input" name="message" placeholder="輸入你想說的話..." required></textarea>
+            
+            <textarea
+                
+                id="ask-textarea"
+                class="ask-input" 
+                name="message" 
+                placeholder="輸入你想說的話..." required>
+                
+            </textarea>
             
             <div style="display: flex; justify-content: center; width: 100%; margin: 5px 0;">
             <div class="h-captcha" data-captcha="true"></div>
@@ -178,6 +186,15 @@
 
         <div class="footer">© 2026 kcyeap. ALL RIGHTS RESERVED.</div>
     </div>
+
+    <script>
+function autoResize(textarea) {
+    // 先把高度重設，才能精確重新計算
+    textarea.style.height = 'auto';
+    // 根據內容的實際高度（scrollHeight）來設定輸入框高度
+    textarea.style.height = textarea.scrollHeight + 'px';
+}
+</script>
 
 </body>
 </html>
